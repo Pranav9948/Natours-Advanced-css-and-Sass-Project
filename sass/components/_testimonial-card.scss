@@ -10,31 +10,26 @@
   z-index: 1;
   border-radius: 1rem;
 
+  @include respond(tab-land) {
+    width: 85%;
+  }
 
-    @include respond(tab-land) {
-      
-      width: 85%;
-    }
+  @include respond(tab-port) {
+    width: 90%;
+  }
 
-
-     @include respond(tab-port) {
-      
-      width: 90%;
-    }
-
-
-    @include respond(phone) {
-      
-      display: flex;
-      flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-    padding: 30px ;
-     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
-     width: 100%;
-    }
-
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 auto;
+  }
 
   &__image {
     shape-outside: circle(50% at 50% 50%);
@@ -79,17 +74,10 @@
     text-align: start;
     font-weight: 500;
 
-     @include respond(phone) {
-    
-
-    .teritary-heading{
-
-text-align: center !important;
-
+    @include respond(phone) {
+      .teritary-heading {
+        text-align: center !important;
+      }
     }
-   
-
-     }
   }
 }
-
