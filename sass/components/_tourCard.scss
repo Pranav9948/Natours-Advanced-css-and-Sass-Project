@@ -1,0 +1,194 @@
+.tour-card {
+  perspective: 250rem;
+  transition: all 3s;
+  position: relative;
+
+
+   @include respond(tab-port) {
+    // width < 900?
+
+      width: 60%;
+      margin: 0 auto;
+  }
+
+
+   @include respond(phone) {
+    // width < 600?
+
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  &__side {
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s;
+    backface-visibility: hidden;
+
+    &__front {
+      background-color: white;
+      position: relative;
+
+      &__tour-picture {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 23rem;
+        background-blend-mode: screen;
+      }
+
+      .tour-picture___1 {
+        background-image: linear-gradient(
+            to right bottom,
+            $dark-yellow-color,
+            $medium-yellow-color
+          ),
+          url("../../img/nat-5.jpg");
+      }
+
+      .tour-picture___2 {
+        background-image: linear-gradient(
+            to right bottom,
+            $dark-green-color,
+            $medium-green-color
+          ),
+          url("../../img/nat-6.jpg");
+      }
+
+      .tour-picture___3 {
+        background-image: linear-gradient(
+            to right bottom,
+            $dark-blue-color,
+            $medium-blue-color
+          ),
+          url("../../img/nat-7.jpg");
+      }
+
+      &__tour-heading {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: right;
+        width: 55%;
+        position: absolute;
+        top: 32%;
+        right: 0%;
+
+        & span {
+          padding: 1rem 1.5rem;
+          box-decoration-break: clone;
+          color: white;
+        }
+      }
+
+      .tour-heading__span__1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $dark-yellow-color,
+          $medium-yellow-color
+        );
+      }
+
+      .tour-heading__span__2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $dark-green-color,
+          $medium-green-color
+        );
+      }
+
+      .tour-heading__span__3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $dark-blue-color,
+          $medium-blue-color
+        );
+      }
+
+      &__card-details {
+        padding: 3rem;
+
+        & ul {
+          text-decoration: none;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+
+          & li {
+            width: 80%;
+            color: #777;
+            padding-bottom: 0.5rem;
+            font-size: 1.6rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            &:not(:last-child) {
+              border-bottom: 1px solid #7777774b;
+            }
+          }
+        }
+      }
+    }
+
+    &__back {
+      transform: rotateY(180deg);
+
+      &__price-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        & p {
+          text-transform: uppercase;
+          font-size: 2.4rem;
+          font-weight: 400;
+          color: white;
+          letter-spacing: 1rem;
+        }
+
+        & h2 {
+          font-size: 6rem;
+          font-weight: 500;
+          color: white;
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+
+  .tour-card-back__1 {
+    background-image: linear-gradient(
+      to right bottom,
+      $dark-yellow-color,
+      $medium-yellow-color
+    );
+  }
+
+  .tour-card-back__2 {
+    background-image: linear-gradient(
+      to right bottom,
+      $dark-green-color,
+      $medium-green-color
+    );
+  }
+
+  .tour-card-back__3 {
+    background-image: linear-gradient(
+      to right bottom,
+      $dark-blue-color,
+      $medium-blue-color
+    );
+  }
+
+  &:hover .tour-card__side__front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .tour-card__side__back {
+    transform: rotateY(0deg);
+  }
+}

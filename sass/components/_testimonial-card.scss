@@ -1,0 +1,95 @@
+.testimonials-card {
+  padding: 60px 90px;
+  background-color: rgba(255, 255, 255, 0.612);
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  z-index: 1;
+  border-radius: 1rem;
+
+
+    @include respond(tab-land) {
+      
+      width: 85%;
+    }
+
+
+     @include respond(tab-port) {
+      
+      width: 90%;
+    }
+
+
+    @include respond(phone) {
+      
+      display: flex;
+      flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    padding: 30px ;
+     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+     width: 100%;
+    }
+
+
+  &__image {
+    shape-outside: circle(50% at 50% 50%);
+    background-color: red($color: #d32525);
+    position: relative;
+    transition: all 0.5s;
+
+    &__caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      transform: translate(-50%, 20%);
+      opacity: 0;
+      transition: all 0.6s;
+      backface-visibility: hidden;
+    }
+
+    & img {
+      clip-path: circle(50% at 50% 50%);
+      width: 18rem;
+      height: 18rem;
+      transition: all 0.4s;
+    }
+
+    &:hover &__caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover .testimonials-card-image {
+      filter: blur(3px) brightness(90%);
+    }
+  }
+
+  &__text {
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    color: #777;
+    text-align: start;
+    font-weight: 500;
+
+     @include respond(phone) {
+    
+
+    .teritary-heading{
+
+text-align: center !important;
+
+    }
+   
+
+     }
+  }
+}
+

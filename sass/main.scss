@@ -1,0 +1,30 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+@import "./base/variables";
+@import "./abstracts/mixins";
+@import "./base/base";
+@import "./base/mixin";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./abstracts/functions";
+@import "./components/button";
+@import "./layouts/navigation";
+@import "./layouts/header";
+@import "./components/composition-image";
+@import "./components/feature-cardz";
+@import "./components/tourCard";
+@import "./components/background-video";
+@import "./components/testimonial-card";
+@import "./components/booking-form";
+@import "./layouts/footer";
+@import "./pages/home";
+
+
+

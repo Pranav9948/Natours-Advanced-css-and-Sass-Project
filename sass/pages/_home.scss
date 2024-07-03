@@ -1,0 +1,175 @@
+.about {
+  background-color: $secondary-background;
+  margin-top: -30vh;
+  padding-bottom: 75vh;
+
+  padding-top: 35vh;
+
+  @include respond(tab-port) {
+    // width < 900?
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @include respond(phone) {
+    // width < 900?
+
+    padding-bottom: 130vh;
+  }
+
+  .about-section {
+    max-width: 110rem;
+    margin: 0 auto;
+    width: 100%;
+
+    @include respond(tab-land) {
+      // width < 1200?
+      max-width: 92rem;
+    }
+  }
+
+  .grid-layout {
+    @include grid-box(repeat(2, 1fr), 6rem);
+
+    @include respond(tab-port) {
+      // width < 900?
+
+      @include grid-box(repeat(2, 1fr), 4rem);
+    }
+
+    @include respond(phone) {
+      // width < 600?
+
+      @include grid-box(1fr, 10rem);
+    }
+  }
+
+  .learn-more-btn {
+    text-align: start;
+  }
+}
+
+.feature-card-section {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($dark-green-color, 0.8),
+      rgba($medium-green-color, 0.8)
+    ),
+    url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  margin-top: -65vh;
+
+  @include respond(tab-port) {
+    // width < 900?
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @include respond(phone) {
+    // width < 600?
+
+    margin-top: -80vh;
+    padding: 10rem 5rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+}
+
+.most-popular-tours {
+  background-color: $secondary-background;
+  margin-top: -40vh;
+  padding-top: 40vh;
+
+  @include respond(tab-land) {
+    // width < 1200?
+
+    margin-top: -60vh;
+    padding-top: 60vh;
+  }
+}
+
+.popular-tours-cards-section {
+  max-width: 110rem;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 15rem;
+
+  .grid-layout {
+    @include grid-box(repeat(3, 1fr), 6rem);
+  }
+
+  @include respond(tab-land) {
+    // width < 1200?
+
+    max-width: 92rem;
+    
+
+    .grid-layout {
+      @include grid-box(repeat(3, 1fr), 3rem);
+    }
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    .grid-layout {
+      @include grid-box(1fr, 6rem);
+    }
+  }
+}
+
+.discover-tour-button {
+  margin-top: 8rem !important;
+}
+
+.testimonial-section {
+  position: relative;
+  padding: 15rem 0rem;
+
+  
+   @include respond(phone) {
+
+     padding: 3rem 5rem;
+   }
+}
+
+// user testimonial section starts
+
+.user-testimonials {
+  .testimonials-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 8rem;
+  }
+}
+
+// Booking section starts
+
+.booking-section {
+  padding: 15rem 0rem;
+  background-image: linear-gradient(
+    to bottom right,
+    $medium-green-color,
+    $dark-green-color
+  );
+
+   @include respond(tab-port) {
+   
+       padding-left: 5rem;
+       padding-right: 5rem;
+  }
+
+  
+}
